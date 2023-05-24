@@ -84,15 +84,15 @@ xcodebuild -create-xcframework -framework "$DEVICE_FRAMEWORK" -framework "$SIMUL
 # Step 5. Convenience step to copy the framework to the project's directory
 echo "Copying to project dir"
 echo "${UNIVERSAL_OUTPUTFOLDER}/${FULL_PRODUCT_NAME}" "${PROJECT_DIR}"
-if [ -d "${PROJECT_DIR}/../${TARGET_NAME}/${PRODUCT_NAME}.xcframework" ]; then
+if [ -d "${PROJECT_DIR}/../frameworks/${TARGET_NAME}/${PRODUCT_NAME}.xcframework" ]; then
     echo "rsync"
-    yes | rsync -r --delete "${OUT_XCFRAMEWORK}" "${PROJECT_DIR}/../${TARGET_NAME}/"
+    yes | rsync -r --delete "${OUT_XCFRAMEWORK}" "${PROJECT_DIR}/../frameworks/${TARGET_NAME}/"
 else
     echo "cp"
-    mkdir -p "${PROJECT_DIR}/../${TARGET_NAME}/"
-    cp -R "${OUT_XCFRAMEWORK}" "${PROJECT_DIR}/../${TARGET_NAME}/${PRODUCT_NAME}.xcframework"
+    mkdir -p "${PROJECT_DIR}/../frameworks/${TARGET_NAME}/"
+    cp -R "${OUT_XCFRAMEWORK}" "${PROJECT_DIR}/../frameworks/${TARGET_NAME}/${PRODUCT_NAME}.xcframework"
 fi
 
-open "${PROJECT_DIR}/../${TARGET_NAME}/"
+open "${PROJECT_DIR}/../frameworks/${TARGET_NAME}/"
 
 fi
