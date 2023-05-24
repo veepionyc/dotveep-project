@@ -1,0 +1,242 @@
+syntax = "proto3";
+
+package veepio;
+
+option objc_class_prefix = "VPKP";
+option java_package = "com.veepio.protobuf";
+option java_outer_classname = "Protobuf";
+
+// Whole veep
+// Should work for encoding and decoding
+
+message Veep {
+   VeepHeader header = 1;
+   // All elements involved in all veep tracks, in order of first use.
+   repeated VeepTrackElement trackElements = 2;
+}
+
+// Parts of veep for streaming (produces equivalent output but won't be read correctly)
+// Should work for writing but not reading
+
+message VeepHeaderContainer {
+   VeepHeader header = 1;
+   reserved 2;
+}
+
+message VeepTrackElementContainer {
+   reserved 1;
+   VeepTrackElement trackElement = 2;
+}
+
+// How to read a streamable veep:
+// Should work for reading and writing
+
+// Q: Can we get rid of this pesky field descriptor?
+// A: Not if we want the nonstreamable veep to be a valid protobuf message
+
+// unsigned char       0x0a  Literal
+// varint                 ?  Length of VeepHeader as varint
+// VeepHeader             ?
+
+// while not eof
+// unsigned char       0x12  Literal
+// varint                 ?  Length of VeepTrackElement as varint
+// VeepTrackElement       ?
+
+// Veep data
+message VeepHeader {
+   string identifier = 1;
+   string title = 2;
+   string description = 3;
+   string creatorEmail = 4;
+   string contentType = 7;
+
+   bytes thumbnailData = 5;
+   string originalContentURI = 6;
+   int32 originalContentWidth = 8;
+   int32 originalContentHeight = 9;
+   repeated string alternativeContentURLs = 12;
+
+   string originalIdentifier = 10;
+   string previousIdentifier = 11;
+
+  string previewURL = 13;
+}
+
+// Veep Track metadata - within stream
+message VeepTrackHeader {
+   enum VeepTrackType {
+     URL = 0;
+     RETAIL = 1;
+     BLOG = 2;
+   }
+
+   string identifier = 1;
+   string title = 2;
+   string description = 3;
+   string url = 4;
+   VeepTrackType type = 7;
+}
+
+// Reference to a previously seen VeepTrackHeader
+message VeepTrackTag {
+  string identifier = 1;
+}
+
+// Abstract still geometry
+message Rect {
+  float x = 1;
+  float y = 2;
+  float width = 3;
+  float height = 4;
+}
+
+// Time representations
+
+// This one is based on Apple's CMTime
+message DiscreteTime {
+  int32 timescale = 1;
+  int64 value = 2;
+}
+
+// This one is based on Apple's CMTime
+message DiscreteTimeRange {
+    DiscreteTime start = 1;
+    DiscreteTime duration = 2;
+}
+
+// Annotation is present and stationary for a time range defined discreetly
+message DiscreteTimeRangeRect {
+    DiscreteTimeRange timeRange = 1;
+    Rect rect = 2;
+}
+
+// Inner unit of annotation
+message VeepTrackElement {
+   reserved 2;
+
+   oneof meta {
+     VeepTrackHeader header = 1;
+     VeepTrackTag tag = 3;
+   }
+
+   // All future shapes and representations will go here
+   oneof data {
+     DiscreteTimeRangeRect discreteTimeRangeRect = 9;
+     Rect rect = 10;
+   }
+}
+
+
+
+// Veepio API
+
+message ErrorResponse {
+  string detail = 1;
+}
+
+// Veep Validation Errors.
+// These must have the same structure as the veep
+// All value fields have been replaced with repeated strings
+// These are the validation error messages
+// A field non_field_errors has been added to each message
+// A field index has been added to the veepTrackElement to indicate which trackElement is being referred to
+
+message VeepValidationError {
+   VeepHeaderValidationError header = 1;
+   // All elements involved in all veep tracks, in order of first use.
+   repeated VeepTrackElementValidationError trackElements = 3;
+   repeated string non_field_errors = 2;
+}
+
+message VeepHeaderContainerValidationError {
+   VeepHeaderValidationError header = 1;
+   reserved 3;
+   // Q: Does having this at the end break streaming?
+   // A: No. If non_field_errors is important, trackElements will most likely be empty
+   repeated string non_field_errors = 2;
+}
+
+message VeepTrackElementContainerValidationError {
+   reserved 1;
+   VeepTrackElementValidationError trackElement = 3;
+   repeated string non_field_errors = 2;
+}
+
+message VeepHeaderValidationError {
+   repeated string identifier = 1;
+   repeated string title = 2;
+   repeated string description = 3;
+   repeated string creatorEmail = 4;
+   repeated string contentType = 7;
+
+   repeated string thumbnailData = 5;
+   repeated string originalContentURI = 6;
+   repeated string originalContentWidth = 11;
+   repeated string originalContentHeight = 10;
+   repeated string alternativeContentURLs = 14;
+   repeated string originalIdentifier = 12;
+   repeated string previousIdentifier = 13;
+   repeated string non_field_errors = 8;
+}
+
+message VeepTrackHeaderValidationError {
+   repeated string identifier = 1;
+   repeated string title = 2;
+   repeated string description = 3;
+   repeated string url = 4;
+   repeated string type = 7;
+   repeated string non_field_errors = 8;
+}
+
+message VeepTrackTagValidationError {
+  repeated string identifier = 1;
+  repeated string non_field_errors = 2;
+}
+
+message RectValidationError {
+  repeated string x = 1;
+  repeated string y = 2;
+  repeated string width = 3;
+  repeated string height = 4;
+  repeated string non_field_errors = 5;
+}
+
+message DiscreteTimeValidationError {
+  repeated string timescale = 1;
+  repeated string value = 2;
+  repeated string non_field_errors = 3;
+}
+
+message DiscreteTimeRangeValidationError {
+    DiscreteTimeValidationError start = 1;
+    DiscreteTimeValidationError duration = 2;
+    repeated string non_field_errors = 3;
+}
+
+message DiscreteTimeRangeRectValidationError {
+    DiscreteTimeRangeValidationError timeRange = 1;
+    RectValidationError rect = 2;
+    repeated string non_field_errors = 3;
+}
+
+message VeepTrackElementValidationError {
+
+   oneof meta {
+     VeepTrackHeaderValidationError header = 1;
+     VeepTrackTagValidationError tag = 3;
+   }
+
+   oneof data {
+     DiscreteTimeRangeRectValidationError discreteTimeRangeRect = 9;
+     RectValidationError rect = 10;
+   }
+
+   string index = 14;
+   repeated string non_field_errors = 15;
+}
+
+
+
+
+
