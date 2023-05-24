@@ -242,7 +242,6 @@
 				ABE756342A1D25A50020D819 /* config */,
 				AB2AC8932A1970E80014EB4B /* dotveep */,
 				AB2AC8922A1970E80014EB4B /* Products */,
-				D4CD4500170ADB504F11F49C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -361,13 +360,6 @@
 				ABE7563A2A1D265C0020D819 /* build_xcframework.sh */,
 			);
 			path = bash;
-			sourceTree = "<group>";
-		};
-		D4CD4500170ADB504F11F49C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

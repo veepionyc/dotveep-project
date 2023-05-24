@@ -1,1 +1,2 @@
 **/*.framework/dotveep filter=lfs diff=lfs merge=lfs -text
+**/protoc filter=lfs diff=lfs merge=lfs -text
