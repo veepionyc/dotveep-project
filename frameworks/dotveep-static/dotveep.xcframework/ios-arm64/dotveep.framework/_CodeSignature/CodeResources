@@ -4,9 +4,169 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Resources/Info.plist</key>
+		<key>Headers/VPKGPBAny.pbobjc.h</key>
 		<data>
-		0qXXSfNIQs7f674+rN0f0YSKjR8=
+		91tLZ7/ikaMt+ja/YGhuImxtq3k=
+		</data>
+		<key>Headers/VPKGPBApi.pbobjc.h</key>
+		<data>
+		bVxpf9ZZM57pSoihIL7w8OHTYNM=
+		</data>
+		<key>Headers/VPKGPBArray.h</key>
+		<data>
+		OxMj2OyA2aEuTl4CQ8L5wOLmZuM=
+		</data>
+		<key>Headers/VPKGPBArray_PackagePrivate.h</key>
+		<data>
+		9RI1/4ZuRG6PLJHWymCDEOhmqAE=
+		</data>
+		<key>Headers/VPKGPBBootstrap.h</key>
+		<data>
+		7zgFClaNRA+hmQFXuar/M0Chtbs=
+		</data>
+		<key>Headers/VPKGPBCodedInputStream.h</key>
+		<data>
+		VHEpg2Izy/aVrqoFxgmb6irOD8w=
+		</data>
+		<key>Headers/VPKGPBCodedInputStream_PackagePrivate.h</key>
+		<data>
+		rbKThQ/noLl3zNNR9iO3tupDlAU=
+		</data>
+		<key>Headers/VPKGPBCodedOutputStream.h</key>
+		<data>
+		Pp5dU6edoRQpbJ2GDZ7udyVbf14=
+		</data>
+		<key>Headers/VPKGPBCodedOutputStream_PackagePrivate.h</key>
+		<data>
+		lIsYDRguiFC37AKLOsp8H5bPF3k=
+		</data>
+		<key>Headers/VPKGPBDescriptor.h</key>
+		<data>
+		VfVwzNvfUL9GLgWRhmK+gd4GmHI=
+		</data>
+		<key>Headers/VPKGPBDescriptor_PackagePrivate.h</key>
+		<data>
+		toE+Awd4TDUQqixbHdwYRzNBXDo=
+		</data>
+		<key>Headers/VPKGPBDictionary.h</key>
+		<data>
+		j55XkBZUmMS3FdB40B2hoAcI34g=
+		</data>
+		<key>Headers/VPKGPBDictionary_PackagePrivate.h</key>
+		<data>
+		GvJV/O0opLbVZ7+11Wz9aBx/aWY=
+		</data>
+		<key>Headers/VPKGPBDuration.pbobjc.h</key>
+		<data>
+		DGl0aribZmwsxmuZ75F/YdkrTgk=
+		</data>
+		<key>Headers/VPKGPBEmpty.pbobjc.h</key>
+		<data>
+		5zGQzz7ekEGgxyXt+avRFOqw/e4=
+		</data>
+		<key>Headers/VPKGPBExtensionInternals.h</key>
+		<data>
+		p8HTOBr93GEhq/qQLuH6ZPi+zYU=
+		</data>
+		<key>Headers/VPKGPBExtensionRegistry.h</key>
+		<data>
+		UBAcJ04Fa2YcqYOyhhDZp4gFYNA=
+		</data>
+		<key>Headers/VPKGPBFieldMask.pbobjc.h</key>
+		<data>
+		guda31YfghD23NKE8T/v4bO3Leo=
+		</data>
+		<key>Headers/VPKGPBMessage.h</key>
+		<data>
+		7cu6f/vNQUsyLY3VR4xWkufCdg8=
+		</data>
+		<key>Headers/VPKGPBMessage_PackagePrivate.h</key>
+		<data>
+		oxR5lsknhhEBCyjdCF+JbLPAQLc=
+		</data>
+		<key>Headers/VPKGPBProtocolBuffers.h</key>
+		<data>
+		SdyyyaNJxIeTzOl9hRx+ZXPCLSk=
+		</data>
+		<key>Headers/VPKGPBProtocolBuffers_RuntimeSupport.h</key>
+		<data>
+		LKk/klVvNDGaM28nfAHvQWZlFOM=
+		</data>
+		<key>Headers/VPKGPBRootObject.h</key>
+		<data>
+		5rVQQuEyIlN45RVLWp4N319Re3E=
+		</data>
+		<key>Headers/VPKGPBRootObject_PackagePrivate.h</key>
+		<data>
+		tTY4mUZOUXCZpHxwlcQf5SFJu4w=
+		</data>
+		<key>Headers/VPKGPBRuntimeTypes.h</key>
+		<data>
+		4N+eHx2OmfCJZ+JXw1E3tGivZf4=
+		</data>
+		<key>Headers/VPKGPBSourceContext.pbobjc.h</key>
+		<data>
+		DGFiTPdmsS21IVGBF0rhN68CrKw=
+		</data>
+		<key>Headers/VPKGPBStruct.pbobjc.h</key>
+		<data>
+		6N8/vRtHUbVtUnfyRyrN20ZDyUQ=
+		</data>
+		<key>Headers/VPKGPBTimestamp.pbobjc.h</key>
+		<data>
+		jeqekY4u59e77wdlYH1If/bMsJM=
+		</data>
+		<key>Headers/VPKGPBType.pbobjc.h</key>
+		<data>
+		0YiJ2yhsxp68J8Pq1EbyRGkG8wQ=
+		</data>
+		<key>Headers/VPKGPBUnknownField.h</key>
+		<data>
+		GjpEBWRzmEzeFYfQ0LeLL42tv6Q=
+		</data>
+		<key>Headers/VPKGPBUnknownFieldSet.h</key>
+		<data>
+		XKv+q8H+1XxQZ2D+3tSa0jInqBs=
+		</data>
+		<key>Headers/VPKGPBUnknownFieldSet_PackagePrivate.h</key>
+		<data>
+		laeh6j85CLvBP+/nmHDnxyYu+L0=
+		</data>
+		<key>Headers/VPKGPBUnknownField_PackagePrivate.h</key>
+		<data>
+		ZC8kMP8u4Zn4AvqZOp8OQ43p1No=
+		</data>
+		<key>Headers/VPKGPBUtilities.h</key>
+		<data>
+		knZ3LbVyeaGy0ZLynP25/LQY3q0=
+		</data>
+		<key>Headers/VPKGPBUtilities_PackagePrivate.h</key>
+		<data>
+		4W03HDqT2V4+7Fpoa4xD4/6ykwA=
+		</data>
+		<key>Headers/VPKGPBWellKnownTypes.h</key>
+		<data>
+		YTmlSioyReUOPRKfJgZoCw6poDg=
+		</data>
+		<key>Headers/VPKGPBWireFormat.h</key>
+		<data>
+		Z3H5LGhnA3YKgApkWUYMFAFrCE0=
+		</data>
+		<key>Headers/VPKGPBWrappers.pbobjc.h</key>
+		<data>
+		kzkm+yM0LrOSXXdPV3eVVHaVxMA=
+		</data>
+		<key>Headers/Veep.pbobjc.h</key>
+		<data>
+		NE8rd7wK1ruKyP6YvV3F4Wvaa04=
+		</data>
+		<key>Headers/dotveep_header.h</key>
+		<data>
+		bLNOi3dcUofaWlg7KRqOokKMNjw=
+		</data>
+		<key>Info.plist</key>
+		<data>
+		I3FsQlmb978dVLILldN1D4JcZfo=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -451,37 +611,26 @@
 			q342l2vClQCUlFbfQEf21K1+hiOy2ZxmPns8sB9++G8=
 			</data>
 		</dict>
-		<key>Resources/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			0qXXSfNIQs7f674+rN0f0YSKjR8=
-			</data>
-			<key>hash2</key>
-			<data>
-			u2uTwzJ2/pkeRkXzdWyroFj35E1aHjbfqucDoOIcfps=
-			</data>
-		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^Resources/</key>
+		<key>^.*</key>
 		<true/>
-		<key>^Resources/.*\.lproj/</key>
+		<key>^.*\.lproj/</key>
 		<dict>
 			<key>optional</key>
 			<true/>
 			<key>weight</key>
 			<real>1000</real>
 		</dict>
-		<key>^Resources/.*\.lproj/locversion.plist$</key>
+		<key>^.*\.lproj/locversion.plist$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
 		</dict>
-		<key>^Resources/Base\.lproj/</key>
+		<key>^Base\.lproj/</key>
 		<dict>
 			<key>weight</key>
 			<real>1010</real>
@@ -503,15 +652,27 @@
 			<key>weight</key>
 			<real>2000</real>
 		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
-		</dict>
 		<key>^.*</key>
 		<true/>
+		<key>^.*\.lproj/</key>
+		<dict>
+			<key>optional</key>
+			<true/>
+			<key>weight</key>
+			<real>1000</real>
+		</dict>
+		<key>^.*\.lproj/locversion.plist$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
+		</dict>
 		<key>^Info\.plist$</key>
 		<dict>
 			<key>omit</key>
@@ -525,37 +686,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^Resources/</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
-		<key>^Resources/.*\.lproj/</key>
-		<dict>
-			<key>optional</key>
-			<true/>
-			<key>weight</key>
-			<real>1000</real>
-		</dict>
-		<key>^Resources/.*\.lproj/locversion.plist$</key>
-		<dict>
-			<key>omit</key>
-			<true/>
-			<key>weight</key>
-			<real>1100</real>
-		</dict>
-		<key>^Resources/Base\.lproj/</key>
-		<dict>
-			<key>weight</key>
-			<real>1010</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>

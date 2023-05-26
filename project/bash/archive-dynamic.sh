@@ -1,4 +1,4 @@
 #/bin/bash
  xcodebuild archive \
- -scheme 'dotveep-dynamic'
+ -scheme 'dotveep-dynamic' \
  -project '../dotveep.xcodeproj'

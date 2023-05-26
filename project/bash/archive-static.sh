@@ -1,4 +1,4 @@
 #/bin/bash
  xcodebuild archive \
- -scheme 'dotveep-static'
+ -scheme 'dotveep-static' \
  -project "dotveep.xcodeproj"
