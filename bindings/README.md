@@ -32,8 +32,5 @@ and parsed separately.
 
    protoc -I=src --objc_out=objc_bindings src/veep.proto
    
-#see also
-    `dotveep docker/` 
-    for automated builds (not working but further documentation)
 
 #current version is (3).22.0
