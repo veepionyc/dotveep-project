@@ -29,28 +29,13 @@ mkdir -p "${UNIVERSAL_OUTPUTFOLDER}"
 echo "Building for iPhoneSimulator - generic"
 say "Building for iPhoneSimulator - generic"
 
-#xcodebuild \
-#-sdk iphonesimulator               \
-#-destination "generic/platform=iOS Simulator" \
-#SKIP_INSTALL=NO \
-#BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
-#ENABLE_BITCODE=NO                  \
-#clean build
-
-
-
 xcodebuild clean build \
 -workspace "${WORKSPACE_PATH}"     \
 -scheme "${TARGET_NAME}"           \
 -configuration ${CONFIGURATION}    \
 -sdk iphonesimulator               \
 -destination "generic/platform=iOS Simulator" \
-SKIP_INSTALL=NO \
-BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
-ENABLE_BITCODE=NO                 \
 BUILD_DIR="${BUILD_DIR}"           \
-#BUILD_ROOT="${BUILD_DIR}"   \
-
 
 status=$?
 
