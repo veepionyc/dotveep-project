@@ -213,7 +213,6 @@
 		ABE756362A1D25A50020D819 /* dynamic.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = dynamic.xcconfig; sourceTree = "<group>"; };
 		ABE756372A1D25A50020D819 /* static-release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "static-release.xcconfig"; sourceTree = "<group>"; };
 		ABE756382A1D25A50020D819 /* defaults.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = defaults.xcconfig; sourceTree = "<group>"; };
-		ABE7563A2A1D265C0020D819 /* build_xcframework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build_xcframework.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,7 +237,6 @@
 			isa = PBXGroup;
 			children = (
 				ABD39F072A1DFEE00014476D /* VPKProtobuf */,
-				ABE756392A1D265C0020D819 /* bash */,
 				ABE756342A1D25A50020D819 /* config */,
 				AB2AC8932A1970E80014EB4B /* dotveep */,
 				AB2AC8922A1970E80014EB4B /* Products */,
@@ -352,14 +350,6 @@
 				ABE756372A1D25A50020D819 /* static-release.xcconfig */,
 			);
 			path = config;
-			sourceTree = "<group>";
-		};
-		ABE756392A1D265C0020D819 /* bash */ = {
-			isa = PBXGroup;
-			children = (
-				ABE7563A2A1D265C0020D819 /* build_xcframework.sh */,
-			);
-			path = bash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -748,6 +738,7 @@
 				ENABLE_MODULE_VERIFIER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -786,6 +777,7 @@
 				ENABLE_MODULE_VERIFIER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

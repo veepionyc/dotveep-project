@@ -29,3 +29,7 @@ see also
 VPKProtbuf/README.md
 
 
+xcframeworks
+===
+build script - project/build_xcframeworks.sh
+
