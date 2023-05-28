@@ -10,3 +10,5 @@
 #include "defaults.xcconfig"
 
 MACH_O_TYPE = mh_dylib
+
+HumanReadableCopyright = $(HumanReadableCopyright)-dynamic

@@ -3,7 +3,7 @@
 # use this bash script to build the xcframeworks
 
 function cleanup () {
-   rm -r archives
+   rm -r /tmp/dotveep-archives
    rm -r ../xcframeworks_new
    rm -r ../xcframeworks_old
 }
@@ -30,7 +30,7 @@ function build_archives() {
      -scheme $schemename \
      -project 'dotveep.xcodeproj' \
      -destination 'generic/platform=iOS' \
-     -archivePath "archives/dotveep-iOS" \
+     -archivePath "/tmp/dotveep-archives/dotveep-iOS" \
      clean
 
     checkstatus $?
@@ -39,15 +39,15 @@ function build_archives() {
      -scheme $schemename\
      -project 'dotveep.xcodeproj' \
      -destination 'generic/platform=iOS Simulator' \
-     -archivePath "archives/dotveep-iOS_Simulator" \
+     -archivePath "/tmp/dotveep-archives/dotveep-iOS_Simulator" \
      clean
      
     checkstatus $?
     
     xcodebuild \
     -create-xcframework \
-    -archive archives/dotveep-iOS.xcarchive -framework dotveep.framework \
-    -archive archives/dotveep-iOS_Simulator.xcarchive -framework dotveep.framework \
+    -archive /tmp/dotveep-archives/dotveep-iOS.xcarchive -framework dotveep.framework \
+    -archive /tmp/dotveep-archives/dotveep-iOS_Simulator.xcarchive -framework dotveep.framework \
     -output ../xcframeworks_new/$schemename/dotveep.xcframework
     
     checkstatus $?

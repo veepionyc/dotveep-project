@@ -11,3 +11,4 @@
 
 MACH_O_TYPE = staticlib
 
+HumanReadableCopyright = $(HumanReadableCopyright)-static

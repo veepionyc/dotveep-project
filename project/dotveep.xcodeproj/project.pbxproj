@@ -140,6 +140,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB12D0122A23AAFC00A6095E /* build_xcframeworks.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build_xcframeworks.sh; sourceTree = "<group>"; };
 		AB2AC8942A1970E80014EB4B /* dotveep_header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dotveep_header.h; sourceTree = "<group>"; };
 		AB2AC89B2A19710B0014EB4B /* Veep.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Veep.pbobjc.h; sourceTree = "<group>"; };
 		AB2AC89C2A19710B0014EB4B /* Veep.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Veep.pbobjc.m; sourceTree = "<group>"; };
@@ -236,6 +237,7 @@
 		AB2AC8872A1970E80014EB4B = {
 			isa = PBXGroup;
 			children = (
+				AB12D0122A23AAFC00A6095E /* build_xcframeworks.sh */,
 				ABD39F072A1DFEE00014476D /* VPKProtobuf */,
 				ABE756342A1D25A50020D819 /* config */,
 				AB2AC8932A1970E80014EB4B /* dotveep */,
@@ -738,8 +740,7 @@
 				ENABLE_MODULE_VERIFIER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "$(HumanReadableCopyright)";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -777,8 +778,7 @@
 				ENABLE_MODULE_VERIFIER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "$(HumanReadableCopyright)";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -814,7 +814,7 @@
 				ENABLE_MODULE_VERIFIER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "$(HumanReadableCopyright)";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -850,7 +850,7 @@
 				ENABLE_MODULE_VERIFIER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "$(HumanReadableCopyright)";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
