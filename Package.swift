@@ -28,7 +28,7 @@ let package = Package(
         .target(
             name: "dotveep"
             ,dependencies: ["VPKProtobuf"]
-            ,path: "dotveep"
+            ,path: "project/dotveep"
             ,publicHeadersPath: "."
             ,cSettings: [
                .unsafeFlags(
@@ -39,7 +39,7 @@ let package = Package(
         
         ,.target(
             name: "VPKProtobuf"
-            ,path: "VPKProtobuf"
+            ,path: "project/VPKProtobuf"
             ,publicHeadersPath: "objectivec"
             ,cSettings: [
                 .unsafeFlags(
