@@ -1,5 +1,8 @@
-veepio protobuf model framework
+veepio protobuf model 
 ===
+bindings, runtime, project, xcframeworks
+
+
 
 bindings
 ===
@@ -12,8 +15,18 @@ bindings
     
   see bindgs/README.md on how to generate the bindings from the veep.proto model using `protoc`
     
+runtime
+===
+
+the Objective-C protobuf runtime 
+
+`_namespaces.sh` prefixes GPB namespace to VPKGPB
+
+
 project
 ===
+
+(Deprecated - for VPKit use dotveep-spm)
 
 the XCode framework project to build dotveep.xcframework
 
@@ -31,5 +44,19 @@ VPKProtbuf/README.md
 
 xcframeworks
 ===
+
+(Deprecated - for VPKit use dotveep-spm)
+
 build script - project/build_xcframeworks.sh
 
+
+
+
+see also
+===
+
+## dotveep-spm   
+ Swift Package Manager distribution of dotveep bindings and VPKGPB runtime
+
+## dotveep  
+Previous docker-based generation scripts and tests for dotveep bindings
